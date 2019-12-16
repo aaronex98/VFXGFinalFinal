@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Light
-  m_Shader: {fileID: -6465566751694194690, guid: e349e2f8cff4972498c86575e9e058bb,
+  m_Name: M_PlanetTwo
+  m_Shader: {fileID: -6465566751694194690, guid: 0b21f21577362584f81f7e39b7dc4498,
     type: 3}
   m_ShaderKeywords: _NORMALMAP_TANGENT_SPACE
   m_LightmapFlags: 4
@@ -111,7 +111,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_46794CF5: 1
+    - Vector1_3AFF1B4B: 0
+    - Vector1_978028A6: 0
     - _AORemapMax: 1
     - _AORemapMin: 0
     - _ATDistance: 1
@@ -157,7 +158,7 @@ Material:
     - _DstBlend: 0
     - _EmissiveColorMode: 1
     - _EmissiveExposureWeight: 1
-    - _EmissiveIntensity: 0.06
+    - _EmissiveIntensity: 10
     - _EmissiveIntensityUnit: 0
     - _EnableBlendModePreserveSpecularLighting: 1
     - _EnableFogOnTransparent: 1
@@ -174,7 +175,6 @@ Material:
     - _HeightPoMAmplitude: 2
     - _HeightTessAmplitude: 2
     - _HeightTessCenter: 0.5
-    - _Intensidad: 1
     - _InvTilingScale: 1
     - _Ior: 1
     - _IridescenceMask: 1
@@ -233,15 +233,15 @@ Material:
     - _ZTestTransparent: 4
     - _ZWrite: 1
     m_Colors:
-    - Color_D57E5325: {r: 1, g: 1, b: 1, a: 1}
-    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - Color_16ED185: {r: 1, g: 0, b: 0, a: 0}
+    - _BaseColor: {r: 0.9056604, g: 0.6348459, b: 0, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.9056604, g: 0.6348459, b: 0, a: 1}
     - _DiffusionProfileAsset: {r: 0, g: 0, b: 0, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissiveColor: {r: 0.015849052, g: 0.015849052, b: 0.015849052, a: 0.06}
-    - _EmissiveColorLDR: {r: 0.26415092, g: 0.26415092, b: 0.26415092, a: 1}
+    - _EmissiveColor: {r: 10, g: 8.772964, b: 0, a: 10}
+    - _EmissiveColorLDR: {r: 1, g: 0.8772964, b: 0, a: 1}
     - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}
     - _IridescenceThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
