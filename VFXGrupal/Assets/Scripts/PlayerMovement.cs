@@ -41,7 +41,10 @@ public class PlayerMovement : MonoBehaviour
             this.transform.position = Vector3.Lerp(this.transform.position, this.transform.position - this.transform.forward, Time.deltaTime * speed);
 
         }
-      
+      if (Input.GetMouseButton(0))
+        {
+
+
         if (Input.mousePosition.x < Screen.width * 1/4)
         {
 
@@ -65,6 +68,7 @@ public class PlayerMovement : MonoBehaviour
 
             cam.transform.Rotate( -Vector3.right * Time.deltaTime * rotSpeed);
 
+        }
         }
     }
 }

@@ -9,30 +9,40 @@ public class LuzParpadeatne : MonoBehaviour
     public Color colorOn;
     public Color colorOff;
 
-    public float minTime;
-    public float maxTime;
+    public float minTimeOn;
+    public float maxTimeOn;
+
+    public float minTimeOff;
+    public float maxTimeOff;
     void Start()
     {
-        StartCoroutine(FocoParpadeando(minTime, maxTime));
+        StartCoroutine(FocoParpadeando(minTimeOn, maxTimeOn, minTimeOff, maxTimeOff));
     }
 
  
 
-    public IEnumerator FocoParpadeando(float min, float max)
+    public IEnumerator FocoParpadeando(float minOn, float maxOn, float minOff, float maxOff)
     {
         foco.enabled = !foco.enabled;
+        //if (foco.enabled)
+        //{
+        //    Debug.Log("4");
+        //    luz.sharedMaterial.SetFloat("_Intensidad", 1);
+        //}
+        //else
+        //{
+        //    luz.GetComponent<MeshRenderer>().sharedMaterial.SetFloat("_Intensidad", 0);
+
+        //}
         if (foco.enabled)
-        {
-            Debug.Log("4");
-            luz.sharedMaterial.SetFloat("_Intensidad", 1);
-        }
+        yield return new WaitForSeconds(Random.Range(minOn, maxOn));
         else
         {
-            luz.GetComponent<MeshRenderer>().sharedMaterial.SetFloat("_Intensidad", 0);
+            yield return new WaitForSeconds(Random.Range(minOff, maxOff));
+
 
         }
-        yield return new WaitForSeconds(Random.Range(min, max));
-        StartCoroutine(FocoParpadeando(min, max));
+        StartCoroutine(FocoParpadeando(minOn, maxOn, minOff, maxOff));
 
         yield return null;
     }
