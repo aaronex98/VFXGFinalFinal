@@ -42,28 +42,28 @@ public class PlayerMovement : MonoBehaviour
 
         }
       
-        if (Input.mousePosition.x < Screen.width * 1/3)
+        if (Input.mousePosition.x < Screen.width * 1/4)
         {
 
-            cam.transform.Rotate(-cam.transform.up * Time.deltaTime * rotSpeed);
+            cam.transform.Rotate(-Vector3.up * Time.deltaTime * rotSpeed);
 
         }
-        else if (Input.mousePosition.x > Screen.width * 2 / 3)
+        else if (Input.mousePosition.x > Screen.width *   3/ 4)
         {
 
-            cam.transform.Rotate( cam.transform.up * Time.deltaTime * rotSpeed);
+            cam.transform.Rotate( Vector3.up * Time.deltaTime * rotSpeed);
 
         }
-        if (Input.mousePosition.y < Screen.width * 1 / 3)
+        if (Input.mousePosition.y < Screen.height * 1 / 4)
         {
 
-            cam.transform.Rotate(-cam.transform.x * Time.deltaTime * rotSpeed);
+            cam.transform.Rotate( Vector3.right * Time.deltaTime * rotSpeed);
 
         }
-        else if (Input.mousePosition.y > Screen.width * 2 / 3)
+        else if (Input.mousePosition.y > Screen.height * 3/ 4)
         {
 
-            cam.transform.Rotate(cam.transform.right * Time.deltaTime * rotSpeed);
+            cam.transform.Rotate( -Vector3.right * Time.deltaTime * rotSpeed);
 
         }
     }
